@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
-<title>Exercicios CSS 1</title>
-    </head>
+<html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    Exercicios CSS 1
+    </title>
+        </head>
+    <style> 
+        input:required:invalid{border-color: red;}
+    </style>
         <body>
-            <div class="alert alert-info">Alerta: Esta é uma mensagem de informação.</div>
-            <div class="alert alert-warning">Perigo: Isto é um aviso de perigo.</div>
-            <div class="alert alert-danger">Informação: Esta é uma mensagem importante.</div>
+            <div style=color:yellow; class="alert alert-info">Atenção: Esta é uma mensagem de atenção.</div>
+            <div style=color:red; class="alert alert-warning">Perigo: Isto é um aviso de perigo.</div>
+            <div style=color:blue; class="alert alert-danger">Informação: Esta é uma mensagem de informações.</div>
+                <p style=color:black;><n>Faça seu login: </n></p>
+            <form>
+                <label for="usuário">Usuário</label>
+                <input type="text" id="usuário" name="usuário" required><br><br>
+                <label for="Senha">Senha</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+                <input type="submit" value="Enviar">
+            </form>
         </body>
 </html>
