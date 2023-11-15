@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE.CSS/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h2>Aluno - Guilherme Rocha </h2>
+    <div class="fundo">
+        <div class="calc">
+            <h1>Calculadora-Javascript</h1>
+            <p id="result"></p>
+            <table>
+                <tr>
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('/')">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="insert('0')">0</button></td>
+                    <td><button onclick="insert('.')"><b>.</b></button></td>
+                    <td><button onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><button class="botaoigual" onclick="calculate()">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function insert(x) {
+            var num = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = num + x;
+        }
+
+        function clean() {
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function back() {
+            var result = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = result.substring(0, result.length - 1);
+        }
+
+        function calculate() {
+            var result = document.getElementById("result").innerHTML;
+            if (result) {
+                document.getElementById("result").innerHTML = eval(result);
+            } else {
+                document.getElementById("result").innerHTML = "ERROR";
+            }
+        }
+    </script>
+    <p>SI-Estácio</p>
+</body>
+
+</html>
